@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './scss/App.scss';
+import React from 'react'
+import './scss/App.scss'
+import TopMenuBar from './components/common/TopMenuBar'
+import MultiActionBar from './components/common/MultiActionBar'
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          testtest
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopMenuBar></TopMenuBar>
+      <section>main console</section>
+      <MultiActionBar></MultiActionBar>
     </div>
   )
 }
