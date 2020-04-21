@@ -1,8 +1,23 @@
 .App {
+  position: relative;
   text-align: center;
   height: 100vh;
   background-color: #2E2E2E;
   color: #fff;
+  &__main-view {
+    position: absolute;
+    width: calc(330 / 360 * 100%);
+    height: calc(100% - 120px);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    overflow-y: scroll;
+  }
+  *{
+    box-sizing: border-box;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,14 +1,15 @@
 import React from 'react'
-import { BarContainer } from './style'
+import { BarContainer, MultiActionButton } from './style'
 
 const MultiActionBar = () => {
     return (
         <BarContainer>
-            <ul>
-                <li><img src="" alt=""/>this</li>
-                <li><img src="" alt=""/>is</li>
-                <li><img src="" alt=""/>action bar</li>
-            </ul>
+            <MultiActionButton>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </MultiActionButton>
         </BarContainer>
     )    
 }
