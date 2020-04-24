@@ -12,42 +12,45 @@ export const TopMenuContainer = styled('header')`
     top: 0;
     width: 100%;
 `
-export const TopMenuButton = styled('ul')`
+export const TopMenuButtonList = styled('ul')`
     display: flex;
     height: 60px;
     background-color: #000;
-    >li {
-        width: calc(100% / 3);
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+`
+export const TopMenuButton:any = styled.li`
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ::before {
+        width: 20px;
+        height: 20px;
+        content: "";
+        display: block;
+        background-color: #fff;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+    :first-child {
+        background-color: ${(props:any) => props.backGround === "inputLog" ? '#2e2e2e' : '#000' };
         ::before {
-            width: 20px;
-            height: 20px;
-            content: "";
-            display: block;
-            background-color: #fff;
-            mask-size: contain;
-            mask-repeat: no-repeat;
-            mask-position: center;
+            mask-image: url(${icon_inputlog});
         }
-        :first-child {
-            ::before {
-                mask-image: url(${icon_inputlog});
-            }
+    }
+    :nth-child(2) {
+        background-color: ${(props:any) => props.backGround === "viewLog" ? '#2e2e2e' : '#000' };
+        ::before {
+            mask-image: url(${icon_viewlog});
         }
-        :nth-child(2) {
-            ::before {
-                mask-image: url(${icon_viewlog});
-            }
+    }
+    :nth-child(3) {
+        background-color: ${(props:any) => props.backGround === "heartRate" ? '#2e2e2e' : '#000' };
+        ::before {
+            mask-image: url(${icon_hr});
         }
-        :nth-child(3) {
-            ::before {
-                mask-image: url(${icon_hr});
-            }
-        }
-    } 
+    }
 `
 
 //bottom action bar
