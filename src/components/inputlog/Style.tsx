@@ -37,11 +37,12 @@ export const DateSelectButton = styled('button')`
         height: 20px;
         content: "";
         display: block;
+        position: absolute;
         background-color: #2e2e2e;
         mask-size: contain;
         mask-repeat: no-repeat;
         mask-position: center;
-        mask-image: url(${icon_cal})
+        mask-image: url(${icon_cal});
     }
 `
 export const InputInfoBasic = styled('p')`
@@ -151,11 +152,12 @@ export const CardIcon = styled('p')`
     border-radius: 50%;
     overflow: hidden;
     display: flex;
+    justify-content: center;
     flex-shrink: 0;
     margin-right: 10px;
+    background-color: #d9d9d9;
     >img {
-        width: 100%;
-        object-fit: cover;
+        width: 60%;
     }
 `
 export const CardSummary = styled('p')`

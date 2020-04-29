@@ -1,21 +1,23 @@
 import React from 'react'
+import Calendar from '../common/Calendar'
+import { Context } from '../../context'
 import {InputInfoContents, DateSelectButton, InputInfoBasic, InputInfoTrimp} from './Style'
 
 const InputInfoHeader = () => {
+  const { state }:any = Context()
   return (
     <InputInfoContents>
-        {/* TODO: clickでcalender */}
-        <DateSelectButton></DateSelectButton>
+        <DateSelectButton>
+          <Calendar></Calendar>
+        </DateSelectButton>
         <div>
             <InputInfoBasic>
-                {/* TODO: state流し込み */}
-                <span>[2020/12/12]</span>
-                <span>[SESSION1]</span>
+                <span>{state.currentDate}</span>
+                <span>{state.currentSession.name}</span>
             </InputInfoBasic>
             <InputInfoTrimp>
                 <span>total</span>
-                {/* TODO: state流し込み */}
-                <span>[1080]</span>
+                <span>{state.currentSession.totalTrimp}</span>
             </InputInfoTrimp>
         </div>
     </InputInfoContents>
